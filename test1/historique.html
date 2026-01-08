@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="historique.css">
+</head>
+
+<body>
+
+<div class="d-flex">
+    <aside class="sidebar d-none d-md-flex flex-column">
+        <div class="sidebar-header me-5">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <span class="bg-primary text-white p-2 rounded-3 me-2">P</span> Parking
+            </a>        </div>
+        <nav class="flex-grow-1 p-3">
+            <a href="dashbord.html" class="nav-link">
+                <i class="fas fa-th-large"></i>
+                Tableau de bord
+            </a>
+            <a href="historique.html" class="nav-link">
+                <i class="fas fa-clock"></i>
+                Historique
+            </a>
+
+         
+        </nav>
+       
+    </aside>
+    <main class="flex-grow-1 p-4">
+    <div class="container d-flex gap-3">
+         <div class="container-fluid px-4 py-4">
+            <div class="d-flex justify-content-between">
+                <h5>Parking Historique</h5>
+                <button class="btn btn-primary"><i class="fa-solid fa-download me-2"></i>Export Report</button>
+            </div>
+            <div class="d-flex gap-3 mt-5">
+                <div class="card p-3 w-50 h-100  border  rounded-2">
+                    <p class="text-muted fw-bold small mb-1">Total Exits Today</p>
+                    <h5>124</h5>
+                </div>
+                  <div class="card p-3 w-50  border  rounded-2">
+                    <p class="text-muted fw-bold small mb-1">Duration</p>
+                    <h5>2h 23m</h5>
+                </div>
+                  <div class="card p-3 w-50  border  rounded-2">
+                    <p class="text-muted fw-bold small mb-1">Total Revenue</p>
+                    <h5>1000 $</h5>
+                </div>
+
+            </div>
+            <!--Card serch-->
+            <div class="card mt-2 p-3 border rounded-2">
+               <div class="d-flex justify-content-between">
+                 <div>
+                    <label>Search Immatriculation</label><br>
+                    <input type="text" placeholder="search Immatriculation..." class="border p-1 rounded-2">
+                </div>
+                <div>
+                    <label>Filter by Date</label><br>
+                    <input type="date" placeholder="search for place ..." class="border p-1 rounded-2">
+                </div>
+                <div>
+                    <label>véhicule Type</label><br>
+                    <select class="w-100 border p-1 rounded-2">
+                        <option >All Type</option>
+                        <option value="moto">Moto</option>
+                        <option value="Voiture">Voiture</option>
+                        <option value="Utilitaire">Utilitaire</option>
+                    </select>
+                </div>
+               </div>
+             
+            </div>
+            <!--table-->
+             <div class="card border-1 rounded-2 mt-3">
+                    <div class="card-body p-4">
+                        <table class="table align-middle">
+                            <thead class="table-light">
+                                <tr class="small text-muted">
+                                    <th>matricule</th>
+                                    <th>TYPE</th>
+                                    <th>Entrée</th>
+                                    <th>Sortie</th>
+                                    <th>Duration</th>
+                                    <th class="text-end ">Fees</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div><div class="fw-bold">GH - 902 - KL</div></div>
+                                        </div>
+                                    </td>
+                                    <td>Voiture</td>
+                                    <td>10:42</td>
+                                    <td>12:45</td>
+                                    <td>2h 23m</td>
+                                    <td class="text-end">23 $</td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div><div class="fw-bold">GH - 902 - KL</div></div>
+                                        </div>
+                                    </td>
+                                    <td>Voiture</td>
+                                    <td>10:42</td>
+                                    <td>12:45</td>
+                                    <td>2h 23m</td>
+                                    <td class="text-end">26 $</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+         </div>
+       
+   
+    </div>
+    </main>
+    </div>
+
+<script src=""></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

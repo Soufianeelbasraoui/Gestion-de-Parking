@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Intelligent</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Ton CSS personnalisé -->
+    <link rel="stylesheet" href="t.css">
+</head>
+<body>
+
+<header class="py-3 text-center text-info bg-dark">
+    <h1>Parking Intelligent</h1>
+</header>
+
+<main class="container my-4">
+
+    <!-- Entrée Véhicule -->
+    <section class="card p-4 mb-4 shadow-sm">
+        <h2 class="text-info mb-3">Entrée Véhicule</h2>
+        <input id="plate" type="text" class="form-control mb-3" placeholder="Immatriculation">
+        <select id="type" class="form-select mb-3">
+            <option value="voiture">Voiture</option>
+            <option value="moto">Moto</option>
+            <option value="camion">Camion</option>
+        </select>
+        <button class="btn btn-info w-100 mb-2" onclick="addVehicle()">Entrer</button>
+        <p id="message" class="fw-bold"></p>
+    </section>
+
+    <!-- Véhicules Stationnés -->
+    <section class="card p-4 mb-4 shadow-sm">
+        <h2 class="text-info mb-3">Véhicules Stationnés</h2>
+        <div class="table-responsive">
+            <table class="table  table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Matricule</th>
+                        <th>Type</th>
+                        <th>Place</th>
+                        <th>Entrée</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="vehicleList"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Places de Parking -->
+    <section class="card p-4 mb-4 shadow-sm">
+        <h2 class="text-info mb-3">Places de Parking</h2>
+        <div id="parking" class="d-grid gap-2" style="grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));"></div>
+    </section>
+
+</main>
+
+<!-- Bootstrap JS Bundle (Popper inclus) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="t.js"></script>
+</body>
+</html>

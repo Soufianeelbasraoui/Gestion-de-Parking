@@ -1,0 +1,117 @@
+/* --- Global & Hero Section --- */
+.hero-section {
+    position: relative;
+    background: url("/images/img5.png") no-repeat center center/cover; 
+    width: 100%;                  
+    height: 70vh; /* Utilise 70% de la hauteur de l'écran */
+    min-height: 400px;
+    display: flex;               
+    align-items: center;         
+    justify-content: center;   
+    color: white;
+    overflow: hidden;
+}
+
+/* Overlay sombre pour la lisibilité */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-section > div {
+    position: relative;
+    z-index: 2;
+    padding: 0 15px;
+}
+
+/* --- Typographie Responsive --- */
+.hero-section h1 {
+    font-size: calc(1.8rem + 1.5vw); /* Taille fluide */
+    font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: calc(1rem + 0.2vw);
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+/* --- Composants --- */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.card {
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* --- Ajustements Mobile (Media Queries) --- */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 500px;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Styling the feature icons */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Enhancing the cards */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Background overlay for Hero if the image is too bright */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-section > div {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,72 @@
+/* Custom Styles */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Parking Slots Styling */
+.slot {
+    width: 95px;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.slot:hover { transform: scale(1.05); }
+
+.slot.free { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.slot.occupied { background-color: #ffebee; color: #c62828; border: 1px solid #ffcdd2; font-size: 1.2rem;}
+.slot.free-elec { background-color: #e3f2fd; color: #1565c0; border: 1px solid #bbdefb; }
+.slot.occupied-elec { background-color: #e3f2fd; color: #1565c0; border: 2px solid #1565c0; font-size: 1.2rem;}
+.slot.free-pmr { background-color: #f3e5f5; color: #7b1fa2; border: 1px solid #e1bee7; font-size: 1.2rem;}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Badge styling to match image */
+.badge {
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.divider-parking {
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.btn-check:checked + .btn-outline-primary {
+    background-color: #ebf4ff !important;
+    border-width: 2px;
+    color: #0d6efd;
+}
+#exitCard{
+     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    z-index: 1050;
+    animation: fadeInScale 0.25s ease;
+}
