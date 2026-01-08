@@ -1,4 +1,4 @@
-// --- Configuration ---
+//Configuration
 const TOTAL_SLOTS = 18; 
 const RATE_FIRST_HOUR = 5; 
 const RATE_NEXT_HOURS = 3;
@@ -90,7 +90,7 @@ function triggerExit(plate) {
         amount += (hoursToCharge - 1) * RATE_NEXT_HOURS;
     }
 
-    // Afficher la card
+    //Afficher la card
     document.getElementById("cPlate").textContent = `Véhicule : ${plate}`;
     document.getElementById("cDuration").textContent = `Durée : ${hours}h ${minutes}min`;
     document.getElementById("cAmount").textContent = `TOTAL À PAYER : ${amount} MAD`;
@@ -123,7 +123,7 @@ function finalizeExit(plate, amount) {
     updateUI();
 }
 
-// --- Mise à jour de l'interface (Identique au précédent) ---
+//Mise à jour de l'interface (Identique au précédent)
 function updateUI() {
     const occupiedCount = activeVehicles.length;
     const freeCount = TOTAL_SLOTS - occupiedCount;

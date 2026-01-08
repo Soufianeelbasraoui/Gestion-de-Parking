@@ -1,0 +1,40 @@
+.info-card {
+  background: #1f2a3a;
+  color: #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.info-content h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-content p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.info-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.info-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon i {
+  font-size: 26px;
+  color: #9ca3af;
+}
