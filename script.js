@@ -1,4 +1,4 @@
-//Configuration
+
 const TOTAL_SLOTS = 18; 
 const RATE_FIRST_HOUR = 5; 
 const RATE_NEXT_HOURS = 3;
@@ -7,7 +7,7 @@ let parkingSlots = [];
 let activeVehicles = [];
 let totalSales = 0;
 
-// Initialisation au chargement
+
 document.addEventListener('DOMContentLoaded', () => {
     const savedVehicles = localStorage.getItem('activeVehicles');
     const savedSales = localStorage.getItem('totalSales');
@@ -90,7 +90,6 @@ function triggerExit(plate) {
         amount += (hoursToCharge - 1) * RATE_NEXT_HOURS;
     }
 
-    //Afficher la card
     document.getElementById("cPlate").textContent = `Véhicule : ${plate}`;
     document.getElementById("cDuration").textContent = `Durée : ${hours}h ${minutes}min`;
     document.getElementById("cAmount").textContent = `TOTAL À PAYER : ${amount} MAD`;
@@ -106,7 +105,6 @@ function triggerExit(plate) {
     document.getElementById("exitCard").classList.add("d-none");
 }
 
-/* Libère la place et enregistre la vente*/
 function finalizeExit(plate, amount) {
     totalSales += amount;
 
@@ -117,13 +115,10 @@ function finalizeExit(plate, amount) {
     slot.occupied = false;
     activeVehicles.splice(vehicleIndex, 1);
 
-    // SAUVEGARDE
     saveData();
-    
     updateUI();
 }
 
-//Mise à jour de l'interface (Identique au précédent)
 function updateUI() {
     const occupiedCount = activeVehicles.length;
     const freeCount = TOTAL_SLOTS - occupiedCount;
